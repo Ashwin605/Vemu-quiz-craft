@@ -8,10 +8,10 @@
   },
   "scripts": {
     "install-server": "cd server && npm install",
-    "postinstall": "npm run install-server",
     "install-client": "cd client && npm install",
-    "build": "npm run install-server && npm run build:client",
     "build:client": "cd client && npm install && npm run build",
+    "postinstall": "npm run install-server && npm run build:client",
+    "build": "npm run install-server && npm run build:client",
     "start": "node server/server.js",
     "start:prod": "NODE_ENV=production node server/server.js",
     "client": "cd client && npm run dev",
